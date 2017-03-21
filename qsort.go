@@ -21,12 +21,12 @@ func quickSort(array []int, left int, right int) {
     low := left
     high := right
     for low < high {
-        for low < high   array[high] >= key {
+        for low < high &&  array[high] >= key {
             
         high--
       }
       array[low] = array[high]
-      for  array[low] <= key {
+      for low < high && array[low] <= key {
         low++
       }
       array[high] = array[low]
